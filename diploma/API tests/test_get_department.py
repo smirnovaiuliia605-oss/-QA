@@ -1,11 +1,12 @@
+import os
 import requests
 
 
 base_url = "https://ru.yougile.com/api-v2/"
+api_token = os.getenv("YOUGILE_API_TOKEN")
 headers = {
-    "Authorization": f"Bearer "
-                     f"{'9Ui-NjuNlh-1Oq2O97kt8yB53BVNn42m0tTz4'
-                        '+Zfr5XwAFufzsU8fQ-AC2JVZSkX'}"
+    "Authorization": f"Bearer {api_token}",
+    "Content-Type": "application/json"
 }
 
 
